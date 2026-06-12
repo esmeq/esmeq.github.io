@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio · Ing. Informatica / Robotica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a href="#home" class="nav-logo">[ EB ]</a>
+      <ul class="nav-links">
+        <li><a href="#about"    data-it="Chi sono"  data-en="About">Chi sono</a></li>
+        <li><a href="#skills"   data-it="Skill"     data-en="Skills">Skill</a></li>
+        <li><a href="#projects" data-it="Progetti"  data-en="Projects">Progetti</a></li>
+        <li><a href="#contact"  data-it="Contatti"  data-en="Contact">Contatti</a></li>
+      </ul>
+      <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home">
+    <div class="container hero-content">
+      <div class="hero-tag"
+           data-it="// studentessa · II anno · ing. informatica"
+           data-en="// student · 2nd year · computer engineering">
+        // studentessa · II anno · ing. informatica
+      </div>
+
+      <h1 class="hero-name">Esmeralda <br>Barbieri</h1>
+
+      <p class="hero-subtitle">
+        Ingegneria Informatica indirizzo Robotico &mdash;
+        appassionata di sistemi embedded, autonomia e controllo.
+        <span class="cursor"></span>
+      </p>
+
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary"
+           data-it="Vedi Progetti" data-en="View Projects">Vedi Progetti</a>
+        <a href="#contact" class="btn btn-secondary"
+           data-it="Contattami" data-en="Contact Me">Contattami</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHI SONO -->
+  <section id="about">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label" data-it="// 01 — about" data-en="// 01 — about">// 01 — about</p>
+        <h2 class="section-title" data-it="Chi sono" data-en="About me">Chi sono</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p data-it="Sono una studentessa al secondo anno di <span class='accent'>Ingegneria Informatica</span> indirizzo Robotico. Mi appassiona tutto ciò che sta all'intersezione tra hardware e software: dai sistemi embedded al controllo di robot autonomi."
+             data-en="I'm a second-year <span class='accent'>Computer Engineering</span> student specialising in Robotics. I'm passionate about everything at the intersection of hardware and software — from embedded systems to autonomous robot control.">
+            Sono una studentessa al secondo anno di <span class="accent">Ingegneria Informatica</span>
+            indirizzo Robotico. Mi appassiona tutto ciò che sta all'intersezione tra
+            hardware e software: dai sistemi embedded al controllo di robot autonomi.
+          </p>
+          <p data-it="Lavoro principalmente con <span class='accent'>C</span> per la programmazione a basso livello e con <span class='accent'>Python</span> per prototipazione rapida e analisi dati. Sto esplorando ROS 2 e la cinematica dei robot manipolatori."
+             data-en="I mainly work with <span class='accent'>C</span> for low-level programming and <span class='accent'>Python</span> for rapid prototyping and data analysis. Currently exploring ROS 2 and manipulator robot kinematics.">
+            Lavoro principalmente con <span class="accent">C</span> per la programmazione a basso
+            livello e con <span class="accent">Python</span> per prototipazione rapida e analisi dati.
+            Sto esplorando ROS 2 e la cinematica dei robot manipolatori.
+          </p>
+          <p data-it="Quando non sono in laboratorio o sui libri, mi trovi a smontare qualche microcontrollore o a guardare paper su navigazione autonoma."
+             data-en="When I'm not in the lab or hitting the books, you'll find me tearing apart microcontrollers or reading papers on autonomous navigation.">
+            Quando non sono in laboratorio o sui libri, mi trovi a smontare qualche
+            microcontrollore o a guardare paper su navigazione autonoma.
+          </p>
+        </div>
+
+        <div class="terminal-box reveal">
+          <div class="terminal-header">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span class="terminal-filename">profilo.json</span>
+          </div>
+          <div class="terminal-body">
+            <span class="line"><span class="key">{</span></span>
+            <span class="line">&nbsp;&nbsp;<span class="key">"nome"</span>: <span class="str">"Esmeralda Barbieri"</span>,</span>
+            <span class="line">&nbsp;&nbsp;<span class="key">"anno"</span>: <span class="num">2</span>,</span>
+            <span class="line">&nbsp;&nbsp;<span class="key">"corso"</span>: <span class="str">"Ing. Informatica"</span>,</span>
+            <span class="line">&nbsp;&nbsp;<span class="key">"indirizzo"</span>: <span class="str">"Robotico"</span>,</span>
+            <span class="line">&nbsp;&nbsp;<span class="key">"linguaggi"</span>: [</span>
+            <span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"C"</span>, <span class="str">"Python"</span></span>
+            <span class="line">&nbsp;&nbsp;],</span>
+            <span class="line">&nbsp;&nbsp;<span class="key">"interessi"</span>: [</span>
+            <span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"embedded systems"</span>,</span>
+            <span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"autonomous robots"</span>,</span>
+            <span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"control theory"</span></span>
+            <span class="line">&nbsp;&nbsp;],</span>
+            <span class="line">&nbsp;&nbsp;<span class="key">"disponibile"</span>: <span class="accent">true</span></span>
+            <span class="line"><span class="key">}</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILL -->
+  <section id="skills">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label" data-it="// 02 — skills" data-en="// 02 — skills">// 02 — skills</p>
+        <h2 class="section-title" data-it="Competenze" data-en="Skills">Competenze</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-category reveal">
+          <p class="skill-cat-title" data-it="⌨ Linguaggi" data-en="⌨ Languages">⌨ Linguaggi</p>
+          <div class="skill-item">
+            <div class="skill-label"><span>C</span><span class="skill-pct">80%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="80"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label"><span>Python</span><span class="skill-pct">50%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="50"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label"><span>Bash / Shell</span><span class="skill-pct">40%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="40"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <p class="skill-cat-title" data-it="🤖 Robotica &amp; Sistemi" data-en="🤖 Robotics &amp; Systems">🤖 Robotica &amp; Sistemi</p>
+          <div class="skill-item">
+            <div class="skill-label"><span>Arduino / Embedded C</span><span class="skill-pct">50%</span></div>
+            <div class="skill-bar"><div class="skill-fill orange" data-pct="50"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label"><span>ROS 2 (base)</span><span class="skill-pct">35%</span></div>
+            <div class="skill-bar"><div class="skill-fill orange" data-pct="35"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">
+              <span data-it="Algoritmi di Controllo" data-en="Control Algorithms">Algoritmi di Controllo</span>
+              <span class="skill-pct">50%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill orange" data-pct="50"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <p class="skill-cat-title" data-it="🔧 Tool &amp; Workflow" data-en="🔧 Tools &amp; Workflow">🔧 Tool &amp; Workflow</p>
+          <div class="skill-item">
+            <div class="skill-label"><span>Git &amp; GitHub</span><span class="skill-pct">65%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="65"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label"><span>Linux</span><span class="skill-pct">0%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="0"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label"><span>MATLAB / Simulink</span><span class="skill-pct">60%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="60"></div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGETTI -->
+  <section id="projects">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label" data-it="// 03 — projects" data-en="// 03 — projects">// 03 — projects</p>
+        <h2 class="section-title" data-it="Progetti" data-en="Projects">Progetti</h2>
+        <div class="section-line"></div>
+        <p class="muted" style="margin-bottom: 2rem; font-size: 0.8rem;"
+           data-it="Clicca su una card per scoprire i dettagli del progetto."
+           data-en="Click on a card to discover project details.">
+          Clicca su una card per scoprire i dettagli del progetto.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- PROGETTO 1 -->
+        <div class="project-card reveal" onclick="flipCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <div>
+                <p class="card-num">01</p>
+                <div class="card-icon">🚗</div>
+                <h3 class="card-title"
+                    data-it="Robot Follower" data-en="Line Follower Robot">Robot Follower</h3>
+                <p class="card-desc"
+                   data-it="Veicolo autonomo che segue una linea sul pavimento usando sensori IR."
+                   data-en="Autonomous vehicle that follows a line on the floor using IR sensors.">
+                  Veicolo autonomo che segue una linea sul pavimento usando sensori IR.
+                </p>
+              </div>
+              <div>
+                <div class="card-tags">
+                  <span class="tag accent">C</span>
+                  <span class="tag">Arduino</span>
+                  <span class="tag">PID</span>
+                </div>
+                <p class="card-hint" style="margin-top: 0.8rem;"
+                   data-it="↩ clicca per dettagli" data-en="↩ click for details">↩ clicca per dettagli</p>
+              </div>
+            </div>
+            <div class="card-back">
+              <div>
+                <p class="card-back-title">Robot Follower</p>
+                <p data-it="Progetto universitario in cui ho implementato un controllore PID per seguire una linea nera. Il robot usa 3 sensori IR per calcolare l'errore e corregge la traiettoria in real-time. Il firmware è scritto in C puro su Arduino Uno."
+                   data-en="University project where I implemented a PID controller to follow a black line. The robot uses 3 IR sensors to calculate the error and corrects its trajectory in real-time. Firmware written in pure C on Arduino Uno.">
+                  Progetto universitario in cui ho implementato un controllore PID per seguire
+                  una linea nera. Il robot usa 3 sensori IR per calcolare l'errore e corregge
+                  la traiettoria in real-time. Il firmware è scritto in C puro su Arduino Uno.
+                </p>
+              </div>
+              <div>
+                <div class="card-tags">
+                  <span class="tag accent">C</span>
+                  <span class="tag">Arduino</span>
+                  <span class="tag">PID</span>
+                </div>
+                <a href="#" class="card-back-link"
+                   data-it="→ Vedi su GitHub" data-en="→ View on GitHub">→ Vedi su GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROGETTO 2 -->
+        <div class="project-card reveal" onclick="flipCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <div>
+                <p class="card-num">02</p>
+                <div class="card-icon">🦾</div>
+                <h3 class="card-title"
+                    data-it="Cinematica Inversa" data-en="Inverse Kinematics">Cinematica Inversa</h3>
+                <p class="card-desc"
+                   data-it="Simulazione della cinematica inversa di un braccio robotico 2-DOF."
+                   data-en="Simulation of inverse kinematics for a 2-DOF robotic arm.">
+                  Simulazione della cinematica inversa di un braccio robotico 2-DOF.
+                </p>
+              </div>
+              <div>
+                <div class="card-tags">
+                  <span class="tag accent">Python</span>
+                  <span class="tag">NumPy</span>
+                  <span class="tag">Matplotlib</span>
+                </div>
+                <p class="card-hint" style="margin-top: 0.8rem;"
+                   data-it="↩ clicca per dettagli" data-en="↩ click for details">↩ clicca per dettagli</p>
+              </div>
+            </div>
+            <div class="card-back">
+              <div>
+                <p class="card-back-title"
+                   data-it="Cinematica Inversa" data-en="Inverse Kinematics">Cinematica Inversa</p>
+                <p data-it="Script Python che calcola gli angoli articolari necessari affinché l'end-effector raggiunga una posizione target. Utilizza l'algebra geometrica (non Jacobiano) e visualizza il risultato in tempo reale con Matplotlib."
+                   data-en="Python script that computes the joint angles needed for the end-effector to reach a target position. Uses geometric algebra (not the Jacobian) and visualises the result in real time with Matplotlib.">
+                  Script Python che calcola gli angoli articolari necessari affinché
+                  l'end-effector raggiunga una posizione target. Utilizza l'algebra
+                  geometrica (non Jacobiano) e visualizza il risultato in tempo reale
+                  con Matplotlib.
+                </p>
+              </div>
+              <div>
+                <div class="card-tags">
+                  <span class="tag accent">Python</span>
+                  <span class="tag">NumPy</span>
+                </div>
+                <a href="#" class="card-back-link"
+                   data-it="→ Vedi su GitHub" data-en="→ View on GitHub">→ Vedi su GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROGETTO 3 -->
+        <div class="project-card reveal" onclick="flipCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <div>
+                <p class="card-num">03</p>
+                <div class="card-icon">📡</div>
+                <h3 class="card-title"
+                    data-it="Sensore Ambientale" data-en="Environmental Sensor">Sensore Ambientale</h3>
+                <p class="card-desc"
+                   data-it="Sistema embedded per la raccolta di dati da sensori di temperatura e umidità."
+                   data-en="Embedded system for collecting data from temperature and humidity sensors.">
+                  Sistema embedded per la raccolta di dati da sensori di temperatura e umidità.
+                </p>
+              </div>
+              <div>
+                <div class="card-tags">
+                  <span class="tag accent">C</span>
+                  <span class="tag">I²C</span>
+                  <span class="tag">STM32</span>
+                </div>
+                <p class="card-hint" style="margin-top: 0.8rem;"
+                   data-it="↩ clicca per dettagli" data-en="↩ click for details">↩ clicca per dettagli</p>
+              </div>
+            </div>
+            <div class="card-back">
+              <div>
+                <p class="card-back-title"
+                   data-it="Sensore Ambientale" data-en="Environmental Sensor">Sensore Ambientale</p>
+                <p data-it="Progetto di sistemi embedded: ho configurato il protocollo I²C su STM32 per comunicare con un sensore DHT22. I dati vengono inviati via UART a un terminale seriale. Gestione delle interruzioni con HAL."
+                   data-en="Embedded systems project: I configured the I²C protocol on STM32 to communicate with a DHT22 sensor. Data is sent via UART to a serial terminal. Interrupt handling done with HAL.">
+                  Progetto di sistemi embedded: ho configurato il protocollo I²C su STM32
+                  per comunicare con un sensore DHT22. I dati vengono inviati via UART
+                  a un terminale seriale. Gestione delle interruzioni con HAL.
+                </p>
+              </div>
+              <div>
+                <div class="card-tags">
+                  <span class="tag accent">C</span>
+                  <span class="tag">STM32</span>
+                </div>
+                <a href="#" class="card-back-link"
+                   data-it="→ Vedi su GitHub" data-en="→ View on GitHub">→ Vedi su GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROGETTO 4 -->
+        <div class="project-card reveal" onclick="flipCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <div>
+                <p class="card-num">04</p>
+                <div class="card-icon">🧠</div>
+                <h3 class="card-title"
+                    data-it="WIP · Prossimo" data-en="WIP · Coming soon">WIP · Prossimo</h3>
+                <p class="card-desc"
+                   data-it="Il prossimo progetto sta arrivando. Stay tuned."
+                   data-en="The next project is on its way. Stay tuned.">
+                  Il prossimo progetto sta arrivando. Stay tuned.
+                </p>
+              </div>
+              <div>
+                <div class="card-tags">
+                  <span class="tag">ROS 2</span>
+                  <span class="tag">Python</span>
+                </div>
+                <p class="card-hint" style="margin-top: 0.8rem;"
+                   data-it="↩ clicca per dettagli" data-en="↩ click for details">↩ clicca per dettagli</p>
+              </div>
+            </div>
+            <div class="card-back">
+              <div>
+                <p class="card-back-title"
+                   data-it="In lavorazione…" data-en="Work in progress…">In lavorazione…</p>
+                <p data-it="Sto sviluppando un nodo ROS 2 per la stima della posa usando la fusione di dati IMU e odometria con un filtro di Kalman. Il codice sarà pubblicato su GitHub appena completato."
+                   data-en="I'm developing a ROS 2 node for pose estimation using IMU and odometry data fusion with a Kalman filter. The code will be published on GitHub once complete.">
+                  Sto sviluppando un nodo ROS 2 per la stima della posa usando la
+                  fusione di dati IMU e odometria con un filtro di Kalman.
+                  Il codice sarà pubblicato su GitHub appena completato.
+                </p>
+              </div>
+              <div>
+                <span class="tag" data-it="In sviluppo" data-en="In development">In sviluppo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATTI -->
+  <section id="contact">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label" data-it="// 04 — contact" data-en="// 04 — contact">// 04 — contact</p>
+        <h2 class="section-title" data-it="Contatti" data-en="Contact">Contatti</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="contact-inner">
+
+        <div class="contact-form reveal">
+          <div class="form-group">
+            <label for="name" data-it="Nome" data-en="Name">Nome</label>
+            <input type="text" id="name"
+                   placeholder="Il tuo nome"
+                   data-it-placeholder="Il tuo nome"
+                   data-en-placeholder="Your name" />
+          </div>
+          <div class="form-group">
+            <label for="email" data-it="Email" data-en="Email">Email</label>
+            <input type="email" id="email"
+                   placeholder="name@email.com"
+                   data-it-placeholder="name@email.com"
+                   data-en-placeholder="name@email.com" />
+          </div>
+          <div class="form-group">
+            <label for="message" data-it="Messaggio" data-en="Message">Messaggio</label>
+            <textarea id="message" rows="5"
+                      placeholder="Scrivi qualcosa..."
+                      data-it-placeholder="Scrivi qualcosa..."
+                      data-en-placeholder="Write something..."></textarea>
+          </div>
+          <button type="button" class="btn btn-primary" onclick="handleSubmit()"
+                  style="align-self: flex-start;"
+                  data-it="Invia Messaggio" data-en="Send Message">
+            Invia Messaggio
+          </button>
+        </div>
+
+        <div class="contact-links reveal">
+          <a href="mailto:esmeralda.barbieri20@gmail.com" class="contact-link-item">
+            <div class="link-icon">✉</div>
+            <div>
+              <p class="link-label" data-it="Email" data-en="Email">Email</p>
+              <p class="link-value">esmeralda.barbieri20@gmail.com</p>
+            </div>
+          </a>
+
+          <a href="https://github.com/esmeq" target="_blank" class="contact-link-item">
+            <div class="link-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="link-label">GitHub</p>
+              <p class="link-value">github.com/esmeq</p>
+            </div>
+          </a>
+
+          <a href="https://linkedin.com/" target="_blank" class="contact-link-item">
+            <div class="link-icon">in</div>
+            <div>
+              <p class="link-label">LinkedIn</p>
+              <p class="link-value">linkedin.com/in/esmeraldabarbieri</p>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>
+        &copy; 2026 <span class="accent">Esmeralda Barbieri</span> &nbsp;·&nbsp;
+        <span data-it="Ingegneria Informatica – Robotica" data-en="Computer Engineering – Robotics">Ingegneria Informatica – Robotica</span> &nbsp;·&nbsp;
+        Built with HTML, CSS &amp; JS
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+
+</body>
+</html>
